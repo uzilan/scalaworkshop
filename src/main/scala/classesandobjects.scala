@@ -1,18 +1,21 @@
-
 class Fraction(val num: Int, val denom: Int) {
   if (denom == 0) throw new IllegalArgumentException
+
   override def toString = num + "/" + denom
+
   def +(that: Fraction): Fraction = {
     Fraction(this.num * that.denom + that.num * this.denom, this.denom * that.denom)
   }
 }
 
-object Fraction{
-  def apply(num: Int,  denom: Int): Fraction = new Fraction(num, denom)
+object Fraction {
+  def apply(num: Int, denom: Int): Fraction = new Fraction(num, denom)
+
   implicit def int2Fraction(i: Int): Fraction = Fraction(i, 1)
 }
 
-object Fractions extends App {
+object Fractions {
+  //extends App {
 
   val f1 = new Fraction(1, 2)
   println(f1)
@@ -24,4 +27,23 @@ object Fractions extends App {
   println(f3)
 
   println(f1 + f3)
+}
+
+
+abstract class Animal
+case class Cat(name: String) extends Animal
+case class Dog(name: String) extends Animal
+
+object AnimalFarm extends App {
+  def animalSay(animal: Animal) {
+    animal match {
+      case Cat(name) => println(name + " says Mjau")
+      case Dog(name) => println(name + " says Voff")
+      case _ => println("???")
+    }
+  }
+
+  for (animal <- List(Cat("Bertil"), Dog("Josef"))) {
+    animalSay(animal)
+  }
 }
