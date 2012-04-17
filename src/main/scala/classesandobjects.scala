@@ -35,15 +35,15 @@ case class Cat(name: String) extends Animal
 case class Dog(name: String) extends Animal
 
 object AnimalFarm extends App {
-  def animalSay(animal: Animal) {
+  def says(animal: Animal) {
     animal match {
-      case Cat(name) => println(name + " says Mjau")
-      case Dog(name) => println(name + " says Voff")
+      case Cat(name) => println(name + " says meow")
+      case Dog(name) => println(name + " says voff")
       case _ => println("???")
     }
   }
 
   for (animal <- List(Cat("Bertil"), Dog("Josef"))) {
-    animalSay(animal)
+    says(animal)
   }
 }

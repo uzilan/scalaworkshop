@@ -1,3 +1,4 @@
+
 trait Touchscreen {
   val touchscreen = "a touchscreen"
 }
@@ -37,4 +38,22 @@ class IPhone has a touchscreen and an apple
 
 
 
+trait Logger {
+  import java.util.logging._
+  private val log = Logger.getLogger(getClass.toString)
+  def info(msg: String) {log.log(Level.INFO, msg)}
+  def error(msg: String) {log.log(Level.SEVERE, msg)}
+}
+
+trait Printer {
+  def printToOut(msg: String) = Console.out.println(msg)
+  def printToErr(msg: String) = Console.err.println(msg)
+}
+
+class HtmlReader extends Logger
+abstract class Parser
+class HtmlParser extends Parser with Printer
+class XmlParser extends Parser with Printer with Logger {
+  val delegate = new Parser with Logger
+}
 
