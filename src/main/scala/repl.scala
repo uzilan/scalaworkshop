@@ -1,52 +1,23 @@
 /*
-scala // automatic vals
-
-scala> 2 + 2
-res0: Int = 4
-
-scala> res0 * 5
-res1: Int = 20
 
 
+// Använd REPL:en för att skapa olika variabler (både automatiska och namngivna) och kombinera dem med varandra
 
-scala> // val och var
+scala> // anonym variabel
 
-scala> var a = "b"
-a: java.lang.String = b
+scala> 2
+res0: Int = 2
 
-scala> a = "a"
-a: java.lang.String = a
+scala> // namngiven variabel
 
-scala> val katt = "hund"
-katt: java.lang.String = hund
-
-scala> katt = "katt"
-<console>:8: error: reassignment to val
-       katt = "katt"
-            ^
+scala> val three = 3
+three: Int = 3
 
 
 
-scala> // functions
+// När kan man använda autocomplete i REPL:en?
 
-scala> def times3(value: Int): Int = {
-     |    value * 3
-     | }
-times3: (value: Int)Int
-
-scala> times3(8)
-res2: Int = 24
-
-scala> def times2(value: Int): Int = value * 2
-times2: (value: Int)Int
-
-scala> times2(9)
-res3: Int = 18
-
-
-
-
-scala> // autocomplete
+// autocomplete när man klickar på tab efter en punkt, vid import, metodnamn, mm:
 
 scala> "test".
 +                     asInstanceOf          charAt                codePointAt           codePointBefore       codePointCount
@@ -68,9 +39,26 @@ import java.util.List
 
 
 
+// Skapa ett "Hello World" meddelande mha två variabler
+
+scala> val hello = "hello"
+hello: java.lang.String = hello
+
+scala> val world = "world"
+world: java.lang.String = world
+
+scala> hello + " " + world
+res1: java.lang.String = hello world
 
 
 
+// Givet att val tjo = "tjohej", vad händer om man skriver tjo * 10?
+
+scala> val tjo = "tjohej"
+tjo: java.lang.String = tjohej
+
+scala> tjo * 10
+res2: String = tjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohej
 
 
 

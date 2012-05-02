@@ -1,6 +1,9 @@
+// Skapa en class Person med några lämpliga attribut i konstruktorn och använd sedan javap för att inspektera vilka metoder den har
+
 case class Person(name: String, age: Int)
 
 /*
+
 $ javap Person
 Compiled from "caseclass.scala"
 public class Person extends java.lang.Object implements scala.ScalaObject,scala.Product,scala.Serializable{
@@ -23,4 +26,8 @@ public class Person extends java.lang.Object implements scala.ScalaObject,scala.
     public boolean canEqual(java.lang.Object);          // canEquals
     public Person(java.lang.String, int);               // constructor
 }
+
+
+// Hur många rader kod skulle det krävas för att skriva motsvarande klass i Java?
+Gisningsvis > 200 rader
 */
