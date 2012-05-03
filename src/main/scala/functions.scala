@@ -35,5 +35,4 @@ object Users extends App {
 
   // anropar och skriver ut resultatet av doWithPerson med kalle och scrambleName som argument
   println(doWithUser(kalle, scrambleName))
-
 }
