@@ -13,6 +13,6 @@ case class Square(side: Double) extends Shape {
 }
 
 case class Circle(r: Double) extends Shape {
-  def area = Pi * pow(r, 2)
-  def perimeter = 2 * Pi * r
+  override def area: Double  = Pi * pow(r, 2)
+  override def perimeter: Double = 2 * Pi * r
 }
