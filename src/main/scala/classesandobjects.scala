@@ -6,7 +6,7 @@ class Fraction(val num: Int, val denom: Int) {
   // Överlagra metoden toString i klassen
   override def toString = num + "/" + denom
 
-  // not part of the exercise, but this is an example of how to create a method that allows adding two Fraction objects
+  // Ingår inte i övningen, men visar exempel på hur man kan skapa en metod som adderar två Fractions
   def +(that: Fraction): Fraction = {
     Fraction(this.num * that.denom + that.num * this.denom, this.denom * that.denom)
   }
@@ -34,6 +34,6 @@ object Fractions extends App {
   val f3: Fraction = 2
   println(f3)
 
-  // not part of the exercise, but nice right?
+  // ingår inte i övningen, men fint eller hur?
   println(f1 + f3)
 }
