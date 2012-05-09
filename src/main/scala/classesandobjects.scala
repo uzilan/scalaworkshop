@@ -3,7 +3,7 @@
 class Fraction(val num: Int, val denom: Int) {
   if (denom == 0) throw new IllegalArgumentException
 
-  // Överlagra metoden toString i klassen
+  // √ñverlagra metoden toString i klassen
   override def toString = num + "/" + denom
 
   // not part of the exercise, but this is an example of how to create a method that allows adding two Fraction objects
@@ -22,7 +22,7 @@ object Fraction {
   implicit def int2Fraction(i: Int): Fraction = Fraction(i, 1)
 }
 
-// Skapa ett objekt Fractions som ärver från App och som testar skapa Fractions med och utan new samt omvandlar Intar till Fractions.
+// Skapa ett objekt Fractions som √§rver fr√•n App och som testar skapa Fractions med och utan new samt omvandlar Intar till Fractions.
 object Fractions extends App {
 
   val f1 = new Fraction(1, 2)
