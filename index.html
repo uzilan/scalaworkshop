@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Scala Workshop by uzilan</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scala Workshop : Preparations, Q&amp;A and exercises for the Scala workshop" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scala Workshop</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Scala Workshop</h1>
-          <h2>Preparations, Q&amp;A and exercises for the Scala workshop</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/uzilan/scalaworkshop">View on GitHub</a>
+
+          <h1 id="project_title">Scala Workshop</h1>
+          <h2 id="project_tagline">Preparations, Q&amp;A and exercises for the Scala workshop</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/uzilan/scalaworkshop/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/uzilan/scalaworkshop/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/uzilan/scalaworkshop/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/uzilan/scalaworkshop/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/uzilan/scalaworkshop" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="preparations" class="anchor" href="#preparations"><span class="octicon octicon-link"></span></a>Preparations</h1>
 
 <p>This workshop mainly consists of practical exercises. It is therefore important that all it's attendees will prepare their development environments according to the following instructions:  </p>
@@ -53,16 +53,21 @@
 </ul><hr><h1>
 <a name="qa" class="anchor" href="#qa"><span class="octicon octicon-link"></span></a>Q&amp;A</h1>
 
-<p><strong>What do I need to do to be able to run <code>scala</code>and <code>scalac</code>?</strong>
-Add your scala/bin folder to your PATH environment variable</p>
+<p><strong>What do I need to do to be able to run <code>scala</code>and <code>scalac</code>?</strong></p>
 
-<p><strong>How do I install sbt?</strong>
-Follow the <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">sbt installation instructions</a></p>
+<ul>
+<li>Add your scala/bin folder to your PATH environment variable</li>
+</ul><p><strong>How do I install sbt?</strong></p>
 
-<p><strong>How do I create a Scala project in Eclipse?</strong><br>
-Choose <strong>File</strong> - <strong>New</strong> - <strong>Other</strong> - <strong>Scala Wizards</strong> - <strong>Scala Project</strong></p>
+<ul>
+<li>Follow the <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">sbt installation instructions</a>
+</li>
+</ul><p><strong>How do I create a Scala project in Eclipse?</strong>  </p>
 
-<p><strong>How to create a Scala project in Intellij?</strong></p>
+<ul>
+<li>Choose <strong>File</strong> - <strong>New</strong> - <strong>Other</strong> - <strong>Scala Wizards</strong> - <strong>Scala Project</strong>
+</li>
+</ul><p><strong>How to create a Scala project in Intellij?</strong></p>
 
 <ul>
 <li>Choose <strong>File</strong> - <strong>New Project</strong> - <strong>Create project from scrach</strong><br>
@@ -79,12 +84,15 @@ Choose <strong>File</strong> - <strong>New</strong> - <strong>Other</strong> - <
 <li>Click in the <strong>Scala</strong> checkbox. Under <strong>Use Scala Distribution</strong>,  choose your Scala installation folder</li>
 <li>Choose <strong>Finish</strong><br>
 </li>
-</ul><p><strong>How do I run <code>javap</code>?</strong>
-*In the terminal, go to the folder containing the file you want to investigate. 
-*Compile it using the <code>scalac</code>command, e.g. <code>scalac animals.scala</code>
-*run <code>scalac</code>on the class you compiled, e.g. <code>scalac Cat</code></p>
+</ul><p><strong>How do I run <code>javap</code>?</strong></p>
 
-<hr><h1>
+<ul>
+<li>In the terminal, go to the folder containing the file you want to investigate. </li>
+<li>Compile it using the <code>scalac</code>command, e.g. <code>scalac animals.scala</code>
+</li>
+<li>run <code>scalac</code>on the class you compiled, e.g. <code>scalac Cat</code>
+</li>
+</ul><hr><h1>
 <a name="exercises" class="anchor" href="#exercises"><span class="octicon octicon-link"></span></a>Exercises</h1>
 
 <p>Solutions to the following exercises can be downloaded and oppened in your IDE using the following instructions:</p>
@@ -253,15 +261,18 @@ libraryDependencies ++= Seq(
 <a name="presentationen" class="anchor" href="#presentationen"><span class="octicon octicon-link"></span></a>Presentationen</h1>
 
 <p>The presentation is available here: <a href="http://prezi.com/toe9moenyluk/scala-workshop-diversify/">presentation</a></p>
-        </section>
-
-        <footer>
-          Scala Workshop is maintained by <a href="https://github.com/uzilan">uzilan</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Scala Workshop maintained by <a href="https://github.com/uzilan">uzilan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
