@@ -1,252 +1,267 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Scala workshop : Förberedelser, Q&amp;A och övningar för Scala workshopen" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Scala workshop</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Scala Workshop by uzilan</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/uzilan/scalaworkshop">View on GitHub</a>
-
-          <h1 id="project_title">Scala workshop</h1>
-          <h2 id="project_tagline">Förberedelser, Q&amp;A och övningar för Scala workshopen</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/uzilan/scalaworkshop/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/uzilan/scalaworkshop/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header>
+          <h1>Scala Workshop</h1>
+          <h2>Preparations, Q&amp;A and exercises for the Scala workshop</h2>
         </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Förberedelser</h1>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/uzilan/scalaworkshop/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/uzilan/scalaworkshop/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/uzilan/scalaworkshop" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-<p>Workshopen kommer att bestå till stor del av praktiska övningar. Det är därför viktigt att alla som vill delta i workshopen ska förbereda sina utvecklingsmiljöer enligt följande instruktioner:</p>
+        <hr>
 
-<ul>
-<li>Installera <a href="http://www.scala-lang.org/downloads">Scala</a> </li>
-<li>Installera <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">sbt</a> </li>
-<li>Installera <a href="http://www.eclipse.org/downloads/">Eclipse</a> eller <a href="http://www.jetbrains.com/idea/download/">Intellij</a> </li>
-<li>Installera <a href="http://www.scala-ide.org/">Scala IDE för Eclipse</a> eller <a>Scala plugin för Intellij</a>
-</li>
-<li>Hämta filen <a href="https://github.com/downloads/uzilan/scalaworkshop/build.sbt">build.sbt</a> och lägg den på sökvägen <code>&lt;hemkatalogen&gt;/.sbt/plugins/</code> (skapa katalogen om den inte redan finns)</li>
-<li>Installera <a href="http://git-scm.com/download">Git</a> </li>
-</ul><p>Om man vill kunna köra sbt i Ecllipse eller Intellij så kan man:</p>
+        <section id="main_content">
+          <h1>
+<a name="preparations" class="anchor" href="#preparations"><span class="octicon octicon-link"></span></a>Preparations</h1>
+
+<p>This workshop mainly consists of practical exercises. It is therefore important that all it's attendees will prepare their development environments according to the following instructions:  </p>
 
 <ul>
-<li>Installera <a href="https://github.com/orfjackal/idea-sbt-plugin/wiki">idea-sbt plugin</a> för Intellij</li>
-<li>Följa instruktionerna för att <a href="http://richard.dallaway.com/sbt-terminal-in-eclipse">köra sbt i terminalfönstret</a> i Eclipse<br>
+<li>Install <a href="http://www.scala-lang.org/downloads">Scala</a> </li>
+<li>Install <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">sbt</a> </li>
+<li>Install <a href="http://www.eclipse.org/downloads/">Eclipse</a> eller <a href="http://www.jetbrains.com/idea/download/">Intellij</a> </li>
+<li>Install [Scala IDE for Eclipse] or <a href="preferably%20using%20the%20plugin%20manager%20in%20the%20IDE">Scala plugin for Intellij</a>
 </li>
-</ul><hr><h1>Q&amp;A</h1>
-
-<p><strong>Vad behöver jag göra för att kunna köra <code>scala</code> och <code>scalac</code>?</strong><br>
-Lägg till bin katalogen i din Scalainstallation i miljövariabeln PATH </p>
-
-<p><strong>Hur installerar man sbt?</strong><br>
-Följ <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">installationsinstruktionerna</a></p>
-
-<p><strong>Hur skapar man ett Scalaprojekt i Eclipse?</strong><br>
-Välj <strong>File</strong> - <strong>New</strong> - <strong>Other</strong> - <strong>Scala Wizards</strong> - <strong>Scala Project</strong></p>
-
-<p><strong>Hur skapar man ett Scalaprojekt i Intellij?</strong><br>
-Välj <strong>File</strong> - <strong>New Project</strong> - <strong>Create project from scrach</strong><br>
-Välj <strong>Next</strong><br>
-Välj <strong>Java Module</strong> och fyll i namn osv.<br>
-Välj <strong>Next</strong><br>
-Välj <strong>Create source directory</strong><br>
-Välj <strong>Next</strong><br>
-Klicka i checkboxen <strong>Scala</strong>. Under <strong>Use Scala Distribution</strong> välj den katalog där du installerade Scala<br>
-Välj <strong>Finish</strong>  </p>
-
-<p><strong>Hur kör man <code>javap</code>?</strong><br>
-I terminalfönstret, gå till katalogen där du skapat filen med klassen du vill undersöka<br>
-kompilera klassen mha <code>scalac</code>, t ex: <code>scalac animals.scala</code><br>
-kör <code>javap</code> på klassen du kompilerat, t ex: <code>javap Cat</code>  </p>
-
-<hr><h1>Övningar</h1>
-
-<p>Lösningarna på följande övningar kan man ladda ner och öppna i IDE:n, genom att: </p>
+<li>Fetch the <a href="https://github.com/downloads/uzilan/scalaworkshop/build.sbt">build.sbt</a> file and add it in your <code>&lt;home&gt;/.sbt/plugins/</code> path (create the folder if it is missing)</li>
+<li>Install <a href="http://git-scm.com/download">Git</a> </li>
+</ul><p>If you want to run sbt inside Ecllipse or Intellij:</p>
 
 <ul>
-<li>I terminalfönstret, skriv: <code>git clone git://github.com/uzilan/scalaworkshop.git</code>
+<li>Install <a href="https://github.com/orfjackal/idea-sbt-plugin/wiki">idea-sbt plugin</a> for Intellij</li>
+<li>Follow the instruktions in <a href="http://richard.dallaway.com/sbt-terminal-in-eclipse">run sbt inside eclipse</a> i Eclipse<br>
 </li>
-<li>Skriv <code>cd scalaworkshop</code> </li>
-<li>Om du använder Eclipse, skriv <code>sbt eclipse</code>. För Intellij, skriv <code>sbt gen-idea</code>
-</li>
-<li>Öppna den nerladdade projektet i Eclipse eller Intellij</li>
-</ul><h3>Scala REPL</h3>
+</ul><hr><h1>
+<a name="qa" class="anchor" href="#qa"><span class="octicon octicon-link"></span></a>Q&amp;A</h1>
+
+<p><strong>What do I need to do to be able to run <code>scala</code>and <code>scalac</code>?</strong>
+Add your scala/bin folder to your PATH environment variable</p>
+
+<p><strong>How do I install sbt?</strong>
+Follow the <a href="https://github.com/harrah/xsbt/wiki/Getting-Started-Setup">sbt installation instructions</a></p>
+
+<p><strong>How do I create a Scala project in Eclipse?</strong><br>
+Choose <strong>File</strong> - <strong>New</strong> - <strong>Other</strong> - <strong>Scala Wizards</strong> - <strong>Scala Project</strong></p>
+
+<p><strong>How to create a Scala project in Intellij?</strong></p>
 
 <ul>
-<li>Använd REPL:en för att skapa olika variabler (både automatiska och namngivna) och kombinera dem med varandra</li>
-<li>När kan man använda autocomplete i REPL:en?</li>
-<li>Skapa ett "Hello World" meddelande mha två variabler<br>
+<li>Choose <strong>File</strong> - <strong>New Project</strong> - <strong>Create project from scrach</strong><br>
 </li>
-<li>Givet att <code>val tjo = "tjohej"</code>, vad händer om man skriver <code>tjo * 10</code>?<br>
+<li>Choose <strong>Next</strong><br>
 </li>
-</ul><h3>Classes &amp; objects</h3>
+<li>Choose <strong>Java Module</strong> and add a name etc.</li>
+<li>Choose <strong>Next</strong><br>
+</li>
+<li>Choose <strong>Create source directory</strong><br>
+</li>
+<li>Choose <strong>Next</strong><br>
+</li>
+<li>Click in the <strong>Scala</strong> checkbox. Under <strong>Use Scala Distribution</strong>,  choose your Scala installation folder</li>
+<li>Choose <strong>Finish</strong><br>
+</li>
+</ul><p><strong>How do I run <code>javap</code>?</strong>
+*In the terminal, go to the folder containing the file you want to investigate. 
+*Compile it using the <code>scalac</code>command, e.g. <code>scalac animals.scala</code>
+*run <code>scalac</code>on the class you compiled, e.g. <code>scalac Cat</code></p>
+
+<hr><h1>
+<a name="exercises" class="anchor" href="#exercises"><span class="octicon octicon-link"></span></a>Exercises</h1>
+
+<p>Solutions to the following exercises can be downloaded and oppened in your IDE using the following instructions:</p>
 
 <ul>
-<li>Skapa en <strong>class Fraction</strong> med attribut <strong>num</strong> och <strong>denom</strong> i konstruktorn. </li>
-<li>Överlagra metoden <strong>toString</strong> i klassen</li>
-<li>Skapa ett <strong>object Fraction</strong> i samma fil</li>
-<li>Skapa en <strong>apply</strong> factorymetod i objektet som skapar en instans av Factoryklassen</li>
-<li>Skapa en <strong>implicit converter</strong> som omvandlar <strong>Int</strong> till <strong>Fraction</strong> i objektet</li>
-<li>Skapa ett <strong>objekt Fractions</strong> som ärver från <strong>App</strong> och som testar skapa Fractions med och utan new samt omvandlar <strong>Int</strong>ar till <strong>Fraction</strong>s. </li>
-</ul><h3>Case classes</h3>
-
-<ul>
-<li>Skapa en <strong>case class Person</strong> med några lämpliga attribut i konstruktorn och använd sedan <strong>javap</strong> för att inspektera vilka metoder den har</li>
-<li>Hur många rader kod skulle det krävas för att skriva motsvarande klass i Java? :) </li>
-</ul><h3>Scaladoc</h3>
-
-<ul>
-<li>När man skapar en <strong>List</strong> i Scala får man en förvald immutable lista. Vilket packet finns den definerad i? Var kan man hitta en mutable lista?</li>
-<li>I scaladoc kan man hitta klasserna <strong>Tuple1</strong> och <strong>Tuple2</strong>. Finns det fler Tuples? Hur många?</li>
-<li>Varför finns inte klassen <strong>String</strong> i Scaladoc? Var finns alla metoder i <strong>String</strong>?</li>
-</ul><h3>Traits &amp; Mixins</h3>
-
-<ul>
-<li>Skapa en <strong>trait Touchscreen</strong> med ett attribute <strong>touchscreen: String</strong> med ett lämpligt värde</li>
-<li>Skapa en <strong>trait Apple</strong> med ett attribute <strong>apple: String</strong> med ett lämpligt värde</li>
-<li>Skapa en <strong>abstract class Thing</strong> med ett attribute <strong>stuff: List[String]</strong> och en metod som skriver ut innehållet i listan (använd <strong>List.mkString</strong>)</li>
-<li>Skapa en <strong>class Android</strong> som ärver från <strong>Thing</strong> och mixar <strong>Touchscreen</strong> och som lägger till <strong>touchscreen</strong> i <strong>stuff</strong>
+<li>In the terminal, write: <code>git clone git://github.com/uzilan/scalaworkshop.git</code>
 </li>
-<li>Skapa en <strong>class IPhone</strong> som ärver från <strong>Thing</strong> och mixar <strong>Touchscreen</strong> och <strong>Apple</strong> och som lägger till <strong>touchscreen</strong> och <strong>apple</strong> i <strong>stuff</strong>
+<li>write <code>cd scalaworkshop</code>
 </li>
-<li>Skapa ett <strong>object Things</strong> som ärver från <strong>App</strong>, och som skriver ut innehållet i en <strong>Android</strong> och en <strong>IPhone</strong>
+<li>If you use Eclipse, write <code>sbt eclipse</code>. For Intellij, write <code>sbt gen-idea</code>
 </li>
-</ul><h3>Functions</h3>
+<li>Open the newely created project in your IDE.</li>
+</ul><h3>
+<a name="scala-repl" class="anchor" href="#scala-repl"><span class="octicon octicon-link"></span></a>Scala REPL</h3>
 
 <ul>
-<li>Skapa en <strong>case class User</strong> med för- och efternamn som argument</li>
-<li>Skapa ett <strong>object User</strong> med följande hjälpfunktioner:
+<li>Use the REPL to create different variables (both automatic and named) and combine them with each other</li>
+<li>When can one use autocomplete in the REPL?</li>
+<li>Create a "Hello World" message using two variables</li>
+<li>Given that <code>val foo = "bar"</code>, what would happen if you run <code>foo * 10</code>?</li>
+</ul><h3>
+<a name="classes--objects" class="anchor" href="#classes--objects"><span class="octicon octicon-link"></span></a>Classes &amp; Objects</h3>
+
+<ul>
+<li>Create a <strong>class Fraction</strong> with attributes <strong>num</strong> and <strong>denom</strong> in the constructor</li>
+<li>Override method <strong>toString</strong> inside the class</li>
+<li>Create an <strong>object Fraction</strong> in the same file</li>
+<li>Create an <strong>Apply</strong> factory method inside the object, which creates instances of the Fraction class.</li>
+<li>Create an <strong>implicit converter</strong> which converts <strong>Int</strong> to <strong>Fraction</strong> instances inside the object</li>
+<li>Create an  <strong>object Fractions</strong> which inherites from <strong>App</strong>, which tests creating Fractions with and without <strong>new</strong>, as well as converting <em>Int</em>s into <em>Fraction</em>*s </li>
+</ul><h3>
+<a name="case-classes" class="anchor" href="#case-classes"><span class="octicon octicon-link"></span></a>Case Classes</h3>
+
+<ul>
+<li>Create a <strong>case class Person</strong> using adequate attributes in the constructor. </li>
+<li>Use the <strong>javap</strong> command to inspect which methods it contains</li>
+<li>How much code would you expect a similar Java implementation would require? :) </li>
+</ul><h3>
+<a name="scaladoc" class="anchor" href="#scaladoc"><span class="octicon octicon-link"></span></a>Scaladoc</h3>
+
+<ul>
+<li>When creating a <strong>List</strong> in Scala, the default implementation is an immutable list. In which package is it defined? Where can one find a mutable list?</li>
+<li>In Scaladoc there are definitions for classes <strong>Tuple1</strong> and <strong>Tuple2</strong>. Are there more Tuples? How many?</li>
+<li>Why can't we find the <strong>String</strong> class definition in Scaladoc? Where can we find the methods in <strong>String</strong>?</li>
+</ul><h3>
+<a name="traits--mixins" class="anchor" href="#traits--mixins"><span class="octicon octicon-link"></span></a>Traits &amp; Mixins</h3>
+
+<ul>
+<li>Create a <strong>trait Touchscreen</strong> with attribute <strong>touchscreen: String</strong>
+</li>
+<li>Create a <strong>trait Apple</strong> with attribute <strong>apple: String</strong> and an adequate value</li>
+<li>Create an <strong>abstract class Thing</strong> with an attribute <strong>stuff: List[String]</strong> and a method that writes the contents of the list (use the <strong>List.mkString</strong> method)</li>
+<li>Create a <strong>class Android</strong> that inherits from <strong>Thing</strong> and mixes <strong>Touchscreen</strong>, and adds <strong>touchscreen</strong> to <strong>stuff</strong>
+</li>
+<li>Create a <strong>class IPhone</strong> that inherits from <strong>Thing</strong> and mixes <strong>Touchscreen</strong> and <strong>Apple</strong>, and adds <strong>touchscreen</strong> and <strong>apple</strong> to <strong>stuff</strong>
+</li>
+<li>Create an <strong>object things</strong> that inherits from <strong>App</strong>, which prints the contents in an <strong>Android</strong> and an <strong>IPhone</strong> instances</li>
+</ul><h3>
+<a name="functions" class="anchor" href="#functions"><span class="octicon octicon-link"></span></a>Functions</h3>
+
+<ul>
+<li>Create a <strong>case class User</strong> with given name and a sirname as arguments</li>
+<li>Create an <strong>object User</strong> with the following help functions:
 
 <ul>
 <li>
-<strong>doWithUser</strong> tar en <strong>User</strong> och en funktion som tar <strong>User</strong> och returnerar en <strong>String</strong> och appliceras på <strong>User</strong>n. Funktionen ska returnera en <strong>String</strong> </li>
+<strong>doWithUser</strong> takes a <strong>User</strong> and a function that takes a <strong>User</strong> as argument and returns a <strong>String</strong>. The function should return a <strong>String</strong> </li>
 <li>
-<strong>fullName</strong> tar en <strong>User</strong> och returnerar hans fullständiga namn</li>
+<strong>fullName</strong> takes a <strong>User</strong> and returns it's full name</li>
 <li>
-<strong>userFullName</strong> tar en <strong>User</strong> och anropar <strong>doWithUser</strong> med <strong>User</strong>n och funktionen <strong>fullName</strong> som argument</li>
+<strong>userFullName</strong> takes a <strong>User</strong> as argument and calls <strong>doWithUser</strong> with the <strong>User</strong> and the <strong>fullName</strong> function and returns the result</li>
 <li>
-<strong>scrambleName</strong> tar en <strong>User</strong> och returnerar hans namn med blandade bokstäver. (Titta på <strong>scala.util.Random</strong> för lämplig funktion)<br>
-</li>
+<strong>scrambleName</strong> takes a <strong>User</strong> as argument and returns it's name with mixed letters. (Take a look at <strong>scala.util.Random</strong>)</li>
 </ul>
 </li>
-<li>Skapa ett program som:
+<li>Create a program that:
 
 <ul>
-<li>importerar metoderna i objektet User mha koden <code>import User._</code>
-</li>
-<li>skapar en <strong>User</strong> kalle</li>
-<li>anropar och skriver ut resultatet av <strong>userFullName</strong> med kalle</li>
-<li>anropar och skriver ut resultatet av <strong>doWithPerson</strong> med kalle och <strong>scrambleName</strong> som argument</li>
+<li>Imports the methods in object <strong>User</strong> using ìmport User._`</li>
+<li>Creates a <strong>User</strong> Bertil</li>
+<li>Calls and prints the result of calling <strong>userFullName</strong> with Bertil as argument</li>
+<li>Calls and prints the result of calling <strong>doWithPerson</strong> with Bertil and <strong>scrambleName</strong> as arguments</li>
 </ul>
 </li>
-</ul><h3>Loops</h3>
+</ul><h3>
+<a name="loops" class="anchor" href="#loops"><span class="octicon octicon-link"></span></a>Loops</h3>
 
 <ul>
-<li>Skriv ett program som skriver ut multiplikationstabellen</li>
-<li>Skriv en for loop som tar en lista med förkortningar av veckodagarna (Mon, Tis, Ons, ...) och skapar en lista med fullständiga namn mha <strong>for</strong> och <strong>yield</strong>
+<li>Create a program that prints the multiplication table</li>
+<li>Create a for loop that takes a list with weekdays in short format (Sun, Mon, Tues, ...) and creates a list with complete weekday names (Sunday, Monday, Tuesday, ...) using <strong>for</strong> and <strong>yield</strong>
 </li>
-<li>Skriv ut, mha en for loop, vart tredje ord ur meningen:
+<li>Using a for loop, print every third word in the string:
 "I have never thought I'm gonna need to give blood again. You saw me up there, right?" </li>
-</ul><h3>Recursion</h3>
+</ul><h3>
+<a name="recursion" class="anchor" href="#recursion"><span class="octicon octicon-link"></span></a>Recursion</h3>
 
 <ul>
-<li>Skriv ett program som rekursivt skriver ut namn på filerna under en given katalog</li>
-<li>Skriv ett program som vänder på en lista rekursivt</li>
-</ul><h3>sbt</h3>
+<li>Create a program which prints the names of the files in a given folder, recursively</li>
+<li>Create a program that reverses a list recursively</li>
+</ul><h3>
+<a name="sbt" class="anchor" href="#sbt"><span class="octicon octicon-link"></span></a>sbt</h3>
 
 <ul>
-<li>I terminalfönstret, skapa en katalog "sbttest"</li>
-<li>byt till katalogen genom att köra <code>cd sbttest</code>
+<li>In the terminal, create a folder named "sbttest"</li>
+<li>Change directory to the folder by running <code>cd sbttest</code>
 </li>
-<li>starta sbt REPL genom att köra <code>sbt</code>
+<li>Start the sbt REPL by running <code>sbt</code>
 </li>
-<li>skriv <code>set name := "sbttest"</code>
+<li>Write <code>set name := "sbttest"</code>
 </li>
-<li>skriv <code>set organization := "diversify.se"</code>
+<li>Write <code>set organization := "webstep.no"</code>
 </li>
-<li>skriv <code>session save</code>
+<li>Write <code>session save</code>
 </li>
-<li>skriv <code>eclipse with-source=true</code> (även om du tänker köra intellij, annars skapas inte katalogstrukturen)</li>
-<li>skriv <code>gen-idea</code> (bara om du tänker köra intellij)</li>
-<li>skriv <code>test</code>
+<li>Write <code>eclipse with-source=true</code> (even if you are running intellij, otherwise no folder structure will be created)</li>
+<li>Write <code>gen-idea</code> (only if you run intellij)</li>
+<li>Write <code>test</code>
 </li>
-<li>öppna projektet i eclipse/intellij</li>
-</ul><p>Voila! nu har du skapat ett sbt projekt med katalogstruktur, färdig att öppnas som projekt i eclipse eller intellij.</p>
+<li>Open the project in your IDE</li>
+</ul><p>Voila! You have now created an sbt project with folder structure which can be opened in your IDE.</p>
 
-<h3>Test</h3>
+<h3>
+<a name="test" class="anchor" href="#test"><span class="octicon octicon-link"></span></a>Test</h3>
 
 <ul>
-<li>Skapa ett sbt projekt</li>
-<li>Lägg till support för specs2 och junit genom att skriva följande efter en tom rad (viktigt!) i build.sbt:</li>
-</ul><p><code>
+<li>Create a new sbt project</li>
+<li>Add support for specs2 and junit by adding the following after an empty row (note: important! After an empty row!) in your build.sbt file.
+<code>
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "1.7.1" % "test",
-  "junit" % "junit" % "4.8.2" % "test"
+"org.specs2" %% "specs2" % "1.7.1" % "test",
+"junit" % "junit" % "4.8.2" % "test"
 )
-</code></p>
+</code>
+</li>
+<li>Create a <strong>trait Shape</strong> with method <strong>area: Double</strong> and <strong>perimeter: Double</strong>
+</li>
+<li>Create a <strong>case class Square</strong> and a <strong>case class Circle</strong> which implements <strong>Shape</strong> and it's methods</li>
+<li>Create tests for classes <strong>Square</strong> and <strong>Circle</strong>
+</li>
+</ul><h3>
+<a name="trollcount" class="anchor" href="#trollcount"><span class="octicon octicon-link"></span></a>Trollcount</h3>
+
+<p>The last exercise is a bit more complex. The exercise can be completed in various ways, depending on how well you feel you understand Scala. Follow these instructions to begin:</p>
 
 <ul>
-<li>Skapa en <strong>trait Shape</strong> med metoder <strong>area: Double</strong> och <strong>perimeter: Double</strong>
+<li>Read about Trollcount at <a href="http://codebyexample.info/2012/04/24/trollcount-count-like-a-troll/">http://codebyexample.info/2012/04/24/trollcount-count-like-a-troll/</a>
 </li>
-<li>Skapa <strong>case class Square</strong> och <strong>case class Circle</strong> som implementerar <strong>Shape</strong> och räknar ut sina area respektive omkrets</li>
-<li>Skriv tester för klasserna <strong>Square</strong> och <strong>Circle</strong> </li>
-</ul><h3>Trollcount</h3>
-
-<p>Den sista övningen heter Trollcount och är lite mer complex. Övningen kan göras på olika sätt, beroende på hur säker man känner sig på Scala. Gör följande för att börja med övningen:</p>
-
-<ul>
-<li>Läs om Trollcount på <a href="http://codebyexample.info/2012/04/24/trollcount-count-like-a-troll/">http://codebyexample.info/2012/04/24/trollcount-count-like-a-troll/</a>
+<li>Fetch the exercise: <code>git clone git://github.com/uzilan/trollcount.git</code>
 </li>
-<li>Hämta övningen: <code>git clone git://github.com/uzilan/trollcount.git</code>
-</li>
-<li>Kör <code>cd trollcount</code>
-</li>
-<li>Välj vilken branch man vill jobba i genom att köra <code>git checkout &lt;branchnamn&gt;</code>:
+<li>Choose which branch to work with by writing <code>git checkout &lt;branchnamn&gt;</code>:
 
 <ul>
 <li>
-<strong>tests-only</strong> - innehåller endast tester - Välj den branchen om du vill implementera hela logiken själv.</li>
+<strong>tests-only</strong> - only contains tests and no implementations. Choose this branch if you want to implement the program yourself.</li>
 <li>
-<strong>tests-and-stubs</strong> - innehåller tester och stubbar - välj den branchen om du vill ha hjälp med att börja implementera lösningen. </li>
+<strong>tests-and-stubs</strong> - contains tests and stubs. Choose this branch if you need help beginning the implementation.</li>
 <li>
-<strong>master</strong> - den fullständiga lösningen. Välj den branchen om du vill gå igenom min lösning.</li>
+<strong>master</strong> - the complete solution. Choose this branch if you want go through the solution.</li>
 </ul>
 </li>
-<li>Kör <code>sbt ~test</code> för att börja testa applikationen</li>
-<li>Implementera!</li>
-</ul><p>Övningen går på att få lösningen att kompilera och testerna att vara gröna. </p>
+<li>Run <code>sbt ~test</code> to begin testing the implementation</li>
+<li>Implement!</li>
+</ul><p>The exercise's goal is to see to that all tests become green.</p>
 
-<hr><h1>Presentationen</h1>
+<hr><h1>
+<a name="presentationen" class="anchor" href="#presentationen"><span class="octicon octicon-link"></span></a>Presentationen</h1>
 
-<p>Vill man se presentationen kan man hitta den på: <a href="http://prezi.com/toe9moenyluk/scala-workshop-diversify/">http://prezi.com/toe9moenyluk/scala-workshop-diversify/</a></p>
-      </section>
+<p>The presentation is available here: <a href="http://prezi.com/toe9moenyluk/scala-workshop-diversify/">presentation</a></p>
+        </section>
+
+        <footer>
+          Scala Workshop is maintained by <a href="https://github.com/uzilan">uzilan</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Scala workshop maintained by <a href="https://github.com/uzilan">uzilan</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
   </body>
 </html>
