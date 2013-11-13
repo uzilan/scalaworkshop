@@ -6,7 +6,7 @@ trait Shape {
   def perimeter: Double
 }
 
-// Skapa case class Square och case class Circle som implementerar Shape och räknar ut sina area respektive omkrets
+// Skapa case class Square och case class Circle som implementerar Shape och rknar ut sina area respektive omkrets
 case class Square(side: Double) extends Shape {
   override def area: Double = pow(side, 2)
   override def perimeter: Double = side * 4

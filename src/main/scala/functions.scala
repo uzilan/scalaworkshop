@@ -1,38 +1,45 @@
 import util.Random
 
-// Skapa en case class User med för- och efternamn som argument
+// Create a case class User with given name and a sirname as arguments
 case class User(givenName: String, surname: String)
 
-// Skapa ett object User med följande hjälpfunktioner:
+// Create an object User with the following help functions:
 object User {
 
-  // doWithPerson tar en User och en funktion som tar User och returnerar en String och appliceras på Usern. Funktionen ska returnera en String
+  // doWithUser takes a User and a function that takes a User as argument and returns a String. The function should return a String
   def doWithUser(u: User, doWith: (User) => String): String = {
     doWith(u)
   }
 
-  // fullName tar en User och returnerar hans fullständiga namn
+  // fullName takes a User and returns it's full name
   def fullName(u: User): String = u.givenName + " " + u.surname
 
-  // userFullName tar en User och anropar doWithUser med Usern och funktionen fullName som argument
+  // userFullName takes a User as argument and calls doWithUser with the User and the fullName function and returns the result
   def userFullUserName(u: User) = doWithUser(u, fullName)
 
-  // scrambleName tar en User och returnerar hans namn med blandade bokstäver. (Titta på scala.util.Random för lämplig funktion)
+  // scrambleName takes a User as argument and returns it's name with mixed letters. (Take a look at scala.util.Random)
   def scrambleName(u: User): String = Random.shuffle((u.givenName + u.surname).toList).mkString
 }
 
-// Skapa ett program som:
+// Create a program that:
 object Users extends App {
 
-  // importerar metoderna i objektet User mha koden import User._
+  // Imports the methods in object User using import User._
   import User._
 
-  // skapar en User kalle
-  val kalle = new User("Kalle", "Persson")
+  // Creates a User Bertil
+  val bertil = new User("Bertil", "Bertilsson")
 
-  // anropar och skriver ut resultatet av userFullName med kalle
-  println(userFullUserName(kalle))
+  // Calls and prints the result of calling userFullName with Bertil as argument
+  println(userFullUserName(bertil))
 
-  // anropar och skriver ut resultatet av doWithPerson med kalle och scrambleName som argument
-  println(doWithUser(kalle, scrambleName))
+  // Calls and prints the result of calling doWithPerson with Bertil and scrambleName as arguments
+  println(doWithUser(bertil, scrambleName))
 }
+
+/*
+
+Bertil Bertilsson
+sentsrterliilBoB
+
+*/

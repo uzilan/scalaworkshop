@@ -1,23 +1,23 @@
 /*
 
 
-// Använd REPL:en för att skapa olika variabler (både automatiska och namngivna) och kombinera dem med varandra
 
-scala> // anonym variabel
+// Use the REPL to create different variables (both anonymous and named) and combine them with each other
+scala> // anonymous variable
 
 scala> 2
 res0: Int = 2
 
-scala> // namngiven variabel
+scala> // named variable
 
 scala> val three = 3
 three: Int = 3
 
 
 
-// När kan man använda autocomplete i REPL:en?
+// When can one use autocomplete in the REPL?
 
-// autocomplete när man klickar på tab efter en punkt, vid import, metodnamn, mm:
+// ...when pressing tab after a dot, using import, method names etc.:
 
 scala> "test".
 +                     asInstanceOf          charAt                codePointAt           codePointBefore       codePointCount
@@ -39,7 +39,7 @@ import java.util.List
 
 
 
-// Skapa ett "Hello World" meddelande mha två variabler
+// Create a "Hello World" message using two variables
 
 scala> val hello = "hello"
 hello: java.lang.String = hello
@@ -52,13 +52,13 @@ res1: java.lang.String = hello world
 
 
 
-// Givet att val tjo = "tjohej", vad händer om man skriver tjo * 10?
+// Given that val foo = "bar", what would happen if you run foo * 10?
 
-scala> val tjo = "tjohej"
-tjo: java.lang.String = tjohej
+scala> val foo = "bar"
+foo: String = bar
 
-scala> tjo * 10
-res2: String = tjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohejtjohej
+scala> foo * 10
+res2: String = barbarbarbarbarbarbarbarbarbar
 
 
 

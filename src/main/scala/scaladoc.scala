@@ -1,16 +1,12 @@
-
-// När man skapar en List i Scala får man en förvald immutable lista. Vilket packet finns den definerad i? Var kan man hitta en mutable lista?
-
-// immutable List - scala.collection.immutable.List
-// mutable List t ex - scala.collection.mutable.LinkedList
+// When creating a List in Scala, the default implementation is an immutable list. In which package is it defined? Where can one find a mutable list?
+// - immutable List - scala.collection.immutable.List
+// - mutable List - e.g. scala.collection.mutable.LinkedList
 
 
-// I scaladoc kan man hitta klasserna Tuple1 och Tuple2. Finns det fler Tuples? Hur många?
-// Titta på källkoden till Tuple2. Om man tittar högst upp kan man klicka på paketet scala. Bläddra ner så ser man att det finns upp till Tuple22.
+// In Scaladoc there are definitions for classes Tuple1 and Tuple2. Are there more Tuples? How many?
+// - Look at the Tuple1 code. The URL is https://github.com/scala/scala/blob/v2.10.3/src/library/scala/Tuple1.scala#L1. Remove the Tuple1.scala#L1 
+//   from the address and you can see all 22 Tuple classes. 
 
 
-// Varför finns inte klassen String i Scaladoc? Var finns alla metoder i String?
-// Klassen String är en del av Java API:n. I Scala utökas den klassen mha klasserna StringOps och WrappedString
-
-
-
+// Why can't we find the String class definition in Scaladoc? Where can we find the methods in String?
+// - Class String is part of the Java API. In Scala, this class is augmented by classes StringOps and WrappedString for example

@@ -2,7 +2,7 @@ import java.io.File
 
 object Recursion extends App {
 
-  // Skriv ett program som rekursivt skriver ut namn på filerna under en given katalog
+  // Create a program which prints the names of the files in a given folder, recursively
   def listFiles(f: String) {
 
     def listFilesRecursively(ff: File, level: Int) {
@@ -15,10 +15,32 @@ object Recursion extends App {
     listFilesRecursively(new File(f), 0)
   }
 
-  listFiles("/Users/uzilandsmann/projects/scala/diversify/trollcount/src")
+  listFiles("/Users/uzilan/projects/scala/scalaworkshop/src")
+
+/*
+
+src
+|main
+||java
+||scala
+|||caseclass.scala
+|||classesandobjects.scala
+|||functions.scala
+|||loops.scala
+|||recursion.scala
+|||repl.scala
+|||scaladoc.scala
+|||shapes.scala
+|||traits.scala
+|test
+||java
+||scala
+|||shapesSpec.scala
+
+*/
 
 
-  // Skriv ett program som vänder på en lista rekursivt
+  // Create a program that reverses a list recursively
   def reverseRecursive[T](l: List[T]): List[T] = l match {
     case e :: tail => reverseRecursive(tail) :+ e
     case _ => Nil
@@ -26,3 +48,9 @@ object Recursion extends App {
 
   println(reverseRecursive("tjolahej".toList).mkString)
 }
+
+/*
+
+jehalojt
+
+*7
