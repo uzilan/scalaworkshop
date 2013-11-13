@@ -42,7 +42,7 @@
 <li>Install <a href="http://www.eclipse.org/downloads/">Eclipse</a> eller <a href="http://www.jetbrains.com/idea/download/">Intellij</a> </li>
 <li>Install <a href="http://www.scala-ide.org/">Scala IDE for Eclipse</a> or <a href="preferably%20using%20the%20plugin%20manager%20in%20the%20IDE">Scala plugin for Intellij</a>
 </li>
-<li>Fetch the <a href="https://github.com/downloads/uzilan/scalaworkshop/build.sbt">build.sbt</a> file and add it in your <code>&lt;home&gt;/.sbt/plugins/</code> path (create the folder if it is missing)</li>
+<li>Fetch the <a href="https://github.com/downloads/uzilan/scalaworkshop/build.sbt">build.sbt</a> file and add it in your <code>&lt;home&gt;/.sbt/0.13/plugins/</code> path (create the folder if it is missing)</li>
 <li>Install <a href="http://git-scm.com/download">Git</a> </li>
 </ul><p>If you want to run sbt inside Ecllipse or Intellij:</p>
 
@@ -95,7 +95,7 @@
 </ul><hr><h1>
 <a name="exercises" class="anchor" href="#exercises"><span class="octicon octicon-link"></span></a>Exercises</h1>
 
-<p>Solutions to the following exercises can be downloaded and oppened in your IDE using the following instructions:</p>
+<p>Solutions to the following exercises can be downloaded and opened in your IDE using the following instructions:</p>
 
 <ul>
 <li>In the terminal, write: <code>git clone git://github.com/uzilan/scalaworkshop.git</code>
@@ -104,12 +104,12 @@
 </li>
 <li>If you use Eclipse, write <code>sbt eclipse</code>. For Intellij, write <code>sbt gen-idea</code>
 </li>
-<li>Open the newely created project in your IDE.</li>
+<li>Open the newly created project in your IDE.</li>
 </ul><h3>
 <a name="scala-repl" class="anchor" href="#scala-repl"><span class="octicon octicon-link"></span></a>Scala REPL</h3>
 
 <ul>
-<li>Use the REPL to create different variables (both automatic and named) and combine them with each other</li>
+<li>Use the REPL to create different variables (both anonymous and named) and combine them with each other</li>
 <li>When can one use autocomplete in the REPL?</li>
 <li>Create a "Hello World" message using two variables</li>
 <li>Given that <code>val foo = "bar"</code>, what would happen if you run <code>foo * 10</code>?</li>
@@ -122,7 +122,7 @@
 <li>Create an <strong>object Fraction</strong> in the same file</li>
 <li>Create an <strong>Apply</strong> factory method inside the object, which creates instances of the Fraction class.</li>
 <li>Create an <strong>implicit converter</strong> which converts <strong>Int</strong> to <strong>Fraction</strong> instances inside the object</li>
-<li>Create an  <strong>object Fractions</strong> which inherites from <strong>App</strong>, which tests creating Fractions with and without <strong>new</strong>, as well as converting <em>Int</em>s into <em>Fraction</em>*s </li>
+<li>Create an  <strong>object Fractions</strong> which inherits from <strong>App</strong>, which tests creating Fractions with and without <strong>new</strong>, as well as converting <strong>Int</strong>s into <strong>Fraction</strong>s </li>
 </ul><h3>
 <a name="case-classes" class="anchor" href="#case-classes"><span class="octicon octicon-link"></span></a>Case Classes</h3>
 
@@ -141,10 +141,9 @@
 <a name="traits--mixins" class="anchor" href="#traits--mixins"><span class="octicon octicon-link"></span></a>Traits &amp; Mixins</h3>
 
 <ul>
-<li>Create a <strong>trait Touchscreen</strong> with attribute <strong>touchscreen: String</strong>
-</li>
-<li>Create a <strong>trait Apple</strong> with attribute <strong>apple: String</strong> and an adequate value</li>
-<li>Create an <strong>abstract class Thing</strong> with an attribute <strong>stuff: List[String]</strong> and a method that writes the contents of the list (use the <strong>List.mkString</strong> method)</li>
+<li>Create a <strong>trait Touchscreen</strong> with attribute <strong>touchscreen: String</strong> with value "a touchscreen"</li>
+<li>Create a <strong>trait Apple</strong> with attribute <strong>apple: String</strong> with value "an Apple"</li>
+<li>Create an <strong>abstract class Thing</strong> with an attribute <strong>stuff: List<a href="">String</a></strong> and a method that writes the contents of the list (use the <strong>List.mkString</strong> method)</li>
 <li>Create a <strong>class Android</strong> that inherits from <strong>Thing</strong> and mixes <strong>Touchscreen</strong>, and adds <strong>touchscreen</strong> to <strong>stuff</strong>
 </li>
 <li>Create a <strong>class IPhone</strong> that inherits from <strong>Thing</strong> and mixes <strong>Touchscreen</strong> and <strong>Apple</strong>, and adds <strong>touchscreen</strong> and <strong>apple</strong> to <strong>stuff</strong>
@@ -171,7 +170,8 @@
 <li>Create a program that:
 
 <ul>
-<li>Imports the methods in object <strong>User</strong> using ìmport User._`</li>
+<li>Imports the methods in object <strong>User</strong> using <code>import User._</code>
+</li>
 <li>Creates a <strong>User</strong> Bertil</li>
 <li>Calls and prints the result of calling <strong>userFullName</strong> with Bertil as argument</li>
 <li>Calls and prints the result of calling <strong>doWithPerson</strong> with Bertil and <strong>scrambleName</strong> as arguments</li>
@@ -222,7 +222,7 @@
 <li>Add support for specs2 and junit by adding the following after an empty row (note: important! After an empty row!) in your build.sbt file.
 <code>
 libraryDependencies ++= Seq(
-"org.specs2" %% "specs2" % "1.7.1" % "test",
+"org.specs2" %% "specs2" % "2.3.3" % "test",
 "junit" % "junit" % "4.8.2" % "test"
 )
 </code>
