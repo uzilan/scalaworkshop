@@ -2,7 +2,7 @@ import org.specs2.mutable.Specification
 import org.junit.runner.RunWith
 import org.specs2.runner.JUnitRunner
 
-// Skriv tester fr klasserna Square och Circle
+// Create tests for classes Square and Circle
 @RunWith(classOf[JUnitRunner])
 class ShapesSpec extends Specification {
 
