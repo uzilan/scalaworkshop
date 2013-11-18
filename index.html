@@ -219,14 +219,14 @@
 
 <ul>
 <li>Create a new sbt project</li>
-<li>Add support for specs2 and junit by adding the following after an empty row (note: important! After an empty row!) in your build.sbt file.
-<code>
-libraryDependencies ++= Seq(
-"org.specs2" %% "specs2" % "2.3.3" % "test",
-"junit" % "junit" % "4.8.2" % "test"
+<li>Add support for specs2 and junit by adding the following after an empty row (note: important! After an empty row!) in your build.sbt file.</li>
+</ul><pre><code>libraryDependencies ++= Seq(
+  "org.specs2" %% "specs2" % "2.3.3" % "test",
+  "junit" % "junit" % "4.8.2" % "test"
 )
-</code>
-</li>
+</code></pre>
+
+<ul>
 <li>Create a <strong>trait Shape</strong> with method <strong>area: Double</strong> and <strong>perimeter: Double</strong>
 </li>
 <li>Create a <strong>case class Square</strong> and a <strong>case class Circle</strong> which implements <strong>Shape</strong> and it's methods</li>
